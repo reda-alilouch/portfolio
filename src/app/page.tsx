@@ -1,103 +1,167 @@
-import Image from "next/image";
+"use client";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaPhp,
+  FaReact,
+  FaDatabase,
+  FaGithub,
+  FaFigma,
+} from "react-icons/fa";
+import { SiMongodb, SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import Button from "@/components/Button/Button";
+
+import { motion } from "framer-motion";
+import { div, main } from "framer-motion/client";
+import { Grid } from "lucide-react";
 
 export default function Home() {
+  const skills = [
+    {
+      name: "HTML",
+      description: "Langage de balisage utilisé pour structurer les pages web.",
+      icon: <FaHtml5 className="text-orange-500 w-6 h-6" />,
+    },
+    {
+      name: "CSS",
+      description:
+        "Permet de styliser les éléments HTML avec des mises en page responsive.",
+      icon: <FaCss3Alt className="text-blue-500 w-6 h-6" />,
+    },
+    {
+      name: "JavaScript",
+      description:
+        "Langage de programmation pour rendre les sites interactifs.",
+      icon: <FaJs className="text-yellow-400 w-6 h-6" />,
+    },
+    {
+      name: "PHP",
+      description:
+        "Langage côté serveur pour créer des applications web dynamiques.",
+      icon: <FaPhp className="text-indigo-700 w-6 h-6" />,
+    },
+    {
+      name: "React",
+      description:
+        "Bibliothèque JavaScript pour construire des interfaces utilisateur modernes.",
+      icon: <FaReact className="text-cyan-400 w-6 h-6 animate-spin-slow" />,
+    },
+    {
+      name: "MongoDB",
+      description: "Base de données NoSQL flexible, orientée documents.",
+      icon: <SiMongodb className="text-green-500 w-6 h-6" />,
+    },
+    {
+      name: "SQL",
+      description: "Langage pour gérer les bases de données relationnelles.",
+      icon: <FaDatabase className="text-gray-500 w-6 h-6" />,
+    },
+    {
+      name: "Tailwind CSS",
+      description:
+        "Framework CSS utilitaire pour créer rapidement des interfaces stylisées.",
+      icon: <SiTailwindcss className="text-sky-400 w-6 h-6" />,
+    },
+    {
+      name: "Next.js",
+      description:
+        "Framework React complet pour le SSR et la génération statique.",
+      icon: <SiNextdotjs className="text-black dark:text-white w-6 h-6" />,
+    },
+    {
+      name: "Figma",
+      description:
+        "Outil de design d'interface pour créer des maquettes interactives.",
+      icon: <FaFigma className="text-pink-500 w-6 h-6" />,
+    },
+    {
+      name: "Git/Github",
+      description:
+        "Outils de gestion de version et de collaboration pour le code source.",
+      icon: <FaGithub className="text-gray-900 dark:text-white w-6 h-6" />,
+    },
+  ];
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <main className="min-h-screen px-6 py-12 bg-white text-gray-900 dark:bg-gray-950 dark:text-white">
+      {/* Hero Section */}
+      <section className="text-center mb-16 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
+        <motion.img
+          src="/hero-image.jpg"
+          alt="Hero Image"
+          className="w-3xs h-3xs md:w-2xs md:h-2xs lg:w-xs lg:h-xs xl:w-sm xl:h-sm rounded-full max-w-md mx-auto"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
         />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div className="lg:col-span-2">
+          <motion.h1
+            className="text-4xl md:text-5xl font-bold mb-4"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Salut, je suis Reda Alilouch
+          </motion.h1>
+          <motion.p
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
           >
-            Read our docs
-          </a>
+            Développeur Web Full Stack passionné, je conçois des interfaces
+            modernes, performantes et responsive. Bienvenue sur mon portfolio !
+          </motion.p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </section>
+
+      {/* Call to Action */}
+      <motion.div
+        className="flex flex-col md:flex-row justify-center gap-4 "
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
+        <Button className="bg-indigo-600 text-white m-auto md:m-0 px-6 py-3 text-center w-max rounded-lg hover:bg-indigo-700 transition">
+          <a href="/projects">Voir mes projets</a>
+        </Button>
+        <Button className="border border-indigo-600 text-center m-auto md:m-0 w-max text-indigo-600 px-6 py-3 rounded-lg hover:bg-indigo-100 dark:hover:bg-gray-900 transition">
+          <a href="/ALILOUCH_Reda.pdf" download>
+            Télécharger mon CV
+          </a>
+        </Button>
+      </motion.div>
+      <section>
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <h2 className="text-3xl font-bold my-12">Mes compétences</h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skills.map((item, index) => (
+              <motion.div
+                key={index}
+                className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+              >
+                <div className="text-indigo-600 dark:text-indigo-400 mb-4 text-3xl flex items-center gap-2 justify-center">
+                  {item.icon}
+                  <span>{item.name}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                  {item.description}
+                </h3>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+    </main>
   );
 }
