@@ -14,10 +14,11 @@ export default function Header() {
   const pathname = usePathname();
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Projects", href: "/projects" },
-    { name: "Contact", href: "/contact" },
+    { name: "Accueil", href: "/" },
+    { name: "Projets", href: "/projects" },
+    { name: "Compétences", href: "/skills" },
+    { name: "About", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);

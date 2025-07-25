@@ -1,5 +1,13 @@
 "use client";
-const Button = ({ className = "", onClick, children, ...props }) => {
+import { ButtonHTMLAttributes, ReactNode } from "react";
+
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  children?: ReactNode;
+}
+
+const Button = ({ className = "", onClick, children, ...props }: ButtonProps) => {
   return (
     <button onClick={onClick} className={`${className}`} {...props}>
       {children}
