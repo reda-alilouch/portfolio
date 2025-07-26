@@ -11,8 +11,6 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { motion } from "framer-motion";
-import { div, main } from "framer-motion/client";
-import { Grid } from "lucide-react";
 
 export default function About() {
   const skills = [

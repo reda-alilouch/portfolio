@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+const nextConfig = {
+  experimental: {
+    css: {
+      lightningcss: false,
+    },
+  },
+} as any;
 
 export default nextConfig;

@@ -4,8 +4,6 @@ import { usePathname } from "next/navigation";
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { handler } from "next/dist/build/templates/app-page";
-import { header } from "motion/react-client";
 import { motion, AnimatePresence } from "framer-motion";
 
 import Button from "@/components/Button/Button";

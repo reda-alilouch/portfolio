@@ -1,7 +1,7 @@
 "use client";
 
 import Button from "@/components/Button/Button";
-
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -33,7 +33,8 @@ export default function Home() {
             transition={{ delay: 0.3 }}
           >
             Développeur Web Full Stack passionné, je conçois des interfaces
-            modernes, performantes et responsive. Bienvenue sur mon portfolio !
+            modernes, performantes et responsive. Bienvenue sur mon
+            portfolio&nbsp;!
           </motion.p>
         </div>
       </section>
@@ -74,10 +75,11 @@ export default function Home() {
           >
             <h2 className="text-6xl font-bold mb-6">À propos de moi</h2>
             <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
-              Je suis un développeur web passionné par la création d'expériences
-              utilisateur exceptionnelles. Mon parcours m'a permis d'acquérir
-              une expertise dans divers langages et technologies, me permettant
-              de concevoir des applications web modernes et performantes.
+              Je suis un développeur web passionné par la création
+              d&#39;expériences utilisateur exceptionnelles. Mon parcours
+              m&#39;a permis d&#39;acquérir une expertise dans divers langages
+              et technologies, me permettant de concevoir des applications web
+              modernes et performantes.
             </p>
           </motion.div>
           <motion.div
@@ -86,7 +88,13 @@ export default function Home() {
             transition={{ duration: 2 }}
             className="min-w-[250px] max-w-[500px]"
           >
-            <img src="hero-image.jpg" alt="" className="rounded-lg" />
+            <Image
+              src="/hero-image.jpg"
+              alt=""
+              width={500}
+              height={500}
+              className="rounded-lg w-full h-auto"
+            />
           </motion.div>
         </div>
       </section>
