@@ -2,23 +2,31 @@ export interface Project {
   name: string;
   description: string;
   image: string;
+  url: string;
 }
 
-export const projects: Project[] = [
+// data/projects.js (ou directement dans ton composant)
+export const projects = [
   {
-    name: "Portfolio Website",
-    description: "A personal portfolio built with Next.js and Tailwind CSS.",
-    image: "/globe.svg",
-  },
-  {
-    name: "E-commerce App",
+    id: 1,
+    name: "Mon Portfolio",
     description:
-      "A modern e-commerce platform with shopping cart and payment integration.",
-    image: "/vercel.svg",
+      "Un portfolio personnel construit avec Next.js et Tailwind CSS.",
+    image: "/images/portfolio.png",
+    url: "https://tonportfolio.com",
   },
   {
-    name: "Blog Platform",
-    description: "A full-featured blog platform with markdown support.",
-    image: "/next.svg",
+    id: 2,
+    name: "App météo",
+    description: "Application météo en React avec API OpenWeather.",
+    image: "/images/meteo.png",
+    url: "https://appmeteo.vercel.app",
+  },
+  {
+    id: 3,
+    name: "Clone Spotify",
+    description: "Clone de Spotify avec Next.js, Spotify API et MongoDB.",
+    image: "/images/spotify.png",
+    url: "https://spotifyclone.vercel.app",
   },
 ];

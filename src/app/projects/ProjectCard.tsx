@@ -8,10 +8,11 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <motion.div 
-    className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}  >
+    <motion.div
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+    >
       <Image
         src={project.image}
         alt={project.name}
@@ -24,7 +25,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           {project.description}
         </p>
-        <Button className="bg-blue-500 py-2 px-4 rounded-md text-white hover:bg-blue-600">
+        <Button
+          className="bg-blue-500 py-2 px-4 rounded-md text-white hover:bg-blue-600"
+          onClick={() => window.open(project.url, "_blank")}
+        >
           View Project
         </Button>
       </div>

@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="min-h-screen px-6 bg-white text-gray-900 dark:bg-gray-950 dark:text-white">
+    <main className="min-h-screen mt-10 px-6 bg-white text-gray-900 dark:bg-gray-950 dark:text-white">
       {/* Hero Section */}
       <section className="text-center mb-16 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center">
         <motion.img
