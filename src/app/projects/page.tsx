@@ -1,4 +1,5 @@
 // src/app/projects/page.tsx
+"use client";
 import type { Metadata } from "next";
 import ProjectsStructuredData from "@/components/seo/ProjectsStructuredData";
 import ContainerProjects from "./ContainerProjects";

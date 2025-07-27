@@ -1,3 +1,4 @@
+"use client";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projects } from "@/app/projects/assets/projectsData";
