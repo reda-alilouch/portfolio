@@ -18,7 +18,7 @@ export default function ProjectsPage() {
     <>
       {/* ✅ DÉCLAREZ ICI le composant ProjectsStructuredData */}
       <ProjectsStructuredData />
-      <Container />
+      <ContainerProjects />
     </>
   );
 }
