@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -33,9 +33,23 @@ export default function Header() {
 
   return (
     <header>
-      <div className="p-6 flex items-center justify-between bg-white text-gray-900 border-b border-gray-200 dark:border-gray-800 dark:bg-gray-950 dark:text-white">
-        <h1 className="text-2xl font-bold">My Portfolio</h1>
-
+      <div className="py-6 px-24 flex items-center justify-between bg-white text-gray-900 border-b border-gray-200 dark:border-gray-800 dark:bg-gray-950 dark:text-white">
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src={"/logoenlight.png"}
+            alt="Logo"
+            width={40}
+            height={40}
+            className="block dark:hidden"
+          />
+          <Image
+            src={"/logoendark.png"}
+            alt="Logo"
+            width={40}
+            height={40}
+            className="hidden dark:block"
+          />
+        </Link>
         <Button
           onClick={() => setIsOpen(!isOpen)}
           className="md:hidden text-gray-900 dark:text-white"

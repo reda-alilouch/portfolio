@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss, SiNextdotjs } from "react-icons/si";
 import { motion } from "framer-motion";
-
+import SkillsStructuredData from "@/components/seo/SkillsStructuredData";
 export default function About() {
   const skills = [
     {
@@ -79,36 +79,39 @@ export default function About() {
     },
   ];
   return (
-    <section id="skills">
-      <motion.div
-        className="mt-12 text-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.7 }}
-      >
-        <h2 className="text-3xl font-bold my-20">Mes compétences</h2>
+    <>
+     < SkillsStructuredData />
+      <section id="skills">
+        <motion.div
+          className="mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7 }}
+        >
+          <h2 className="text-3xl font-bold my-20">Mes compétences</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((item, index) => (
-            <motion.div
-              key={index}
-              className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition hover:scale-105"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-            >
-              <div className="text-indigo-600 dark:text-indigo-400 mb-4 text-3xl flex items-center gap-2 justify-center">
-                {item.icon}
-                <span>{item.name}</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
-                {item.description}
-              </h3>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-    </section>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skills.map((item, index) => (
+              <motion.div
+                key={index}
+                className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-lg transition hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+              >
+                <div className="text-indigo-600 dark:text-indigo-400 mb-4 text-3xl flex items-center gap-2 justify-center">
+                  {item.icon}
+                  <span>{item.name}</span>
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                  {item.description}
+                </h3>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </section>
+    </>
   );
 }
