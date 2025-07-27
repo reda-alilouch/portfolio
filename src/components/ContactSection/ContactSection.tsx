@@ -6,7 +6,7 @@ import ContactStructuredData from "@/components/seo/ContactStructuredData";
 const ContactSection = () => {
   return (
     <>
-    <ContactStructuredData />
+      <ContactStructuredData />
       <section
         id="Contact_Section"
         className="py-16 px-4 bg-white dark:bg-gray-950"

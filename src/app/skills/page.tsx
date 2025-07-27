@@ -80,7 +80,7 @@ export default function About() {
   ];
   return (
     <>
-     < SkillsStructuredData />
+      <SkillsStructuredData />
       <section id="skills">
         <motion.div
           className="mt-12 text-center"
