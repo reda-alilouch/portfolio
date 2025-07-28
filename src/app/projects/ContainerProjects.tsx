@@ -1,7 +1,13 @@
 // ContainerProjects.tsx
 "use client";
+import type { Metadata } from "next";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import { projects } from "./assets/projectsData";
+export const metadata: Metadata = {
+  title: "Mes Projets",
+  description:
+    "Découvrez mes projets de développement web et mes réalisations en tant que développeur full stack.",
+};
 const ContainerProjects = () => {
   return (
     <main className="min-h-screen py-10 px-4 py-12 bg-white text-gray-900 dark:bg-gray-950 dark:text-white">

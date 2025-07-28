@@ -1,7 +1,10 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  // Configuration de base de Next.js
+const nextConfig = {
+  experimental: {
+    // Retirez la clé 'css' qui n'existe pas
+  },
+  transpilePackages: ['framer-motion'],
 };
 
 export default nextConfig;
