@@ -15,8 +15,8 @@ export default function Header() {
     { name: "Accueil", href: "/" },
     { name: "Projets", href: "/projects" },
     { name: "Compétences", href: "/skills" },
-    { name: "About", href: "/#about" },
-    { name: "Contact", href: "/#contact" },
+    { name: "About", href: "/#About_Section" },
+    { name: "Contact", href: "/#Contact_Section" },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
