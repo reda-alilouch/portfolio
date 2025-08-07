@@ -1,6 +1,4 @@
 "use client";
-import Button from "@/components/Button/Button";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import ContactStructuredData from "@/components/seo/ContactStructuredData";
 const ContactSection = () => {

@@ -1,6 +1,5 @@
 "use client";
 import Button from "@/components/Button/Button";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import HomeStructuredData from "@/components/seo/HomeStructuredData";
 

@@ -1,8 +1,5 @@
 "use client";
 
-import Button from "@/components/Button/Button";
-import Image from "next/image";
-import { motion } from "framer-motion";
 import AboutSection from "@/components/AboutSection/AboutSection";
 import ContactSection from "@/components/ContactSection/ContactSection";
 import HeroSection from "@/components/HeroSection/HeroSection";

@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { projects } from "@/app/projects/assets/projectsData";
-import Image from "next/image";
+import ProjectSlider from "@/components/ProjectSlider/ProjectSlider";
 
 // Function to get project by slug
 function getProjectBySlug(slug: string) {
@@ -31,7 +31,7 @@ export async function generateMetadata({
     openGraph: {
       title: project.title,
       description: project.description,
-      images: [project.image],
+      images: project.images,
     },
   };
 }
@@ -44,10 +44,10 @@ export async function generateStaticParams() {
 }
 
 // Main project page component
-export default async function ProjectPage({ 
-  params 
-}: { 
-  params: Promise<{ slug: string }> 
+export default async function ProjectPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
@@ -60,14 +60,7 @@ export default async function ProjectPage({
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-6">{project.title}</h1>
 
-      <Image
-        src={project.image}
-        alt={project.title}
-        width={800}
-        height={400}
-        className="rounded-lg shadow-lg mb-6"
-        priority
-      />
+      <ProjectSlider images={project.images} />
 
       <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
         {project.description}
