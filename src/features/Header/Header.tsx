@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="py-6 px-24 flex items-center justify-between bg-white text-gray-900 border-b border-gray-200 dark:border-gray-800 dark:bg-gray-950 dark:text-white">
+      <div className="py-6 px-6 md:px-18 lg:px-24 flex items-center justify-between bg-white text-gray-900 border-b border-gray-200 dark:border-gray-800 dark:bg-gray-950 dark:text-white">
         <Link href="/" className="flex items-center gap-2">
           <Image
             src={"/logoenlight.png"}
