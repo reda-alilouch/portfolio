@@ -13,8 +13,8 @@ const AboutSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 2 }}
           >
-            <h2 className="text-6xl font-bold mb-6">À propos de moi</h2>
-            <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-400">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">À propos de moi</h2>
+            <p className="max-w-2xl mx-auto text-lg md:text-xl text-gray-600 dark:text-gray-400">
               Je suis un développeur web passionné par la création
               d&#39;expériences utilisateur exceptionnelles. Mon parcours
               m&#39;a permis d&#39;acquérir une expertise dans divers langages
