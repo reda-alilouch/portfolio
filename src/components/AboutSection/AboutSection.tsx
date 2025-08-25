@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <>
       <AboutStructuredData />
-      <section id="About_Section" className="mt-20 px-30">
+      <section id="About_Section" className="mt-20 lg:px-30">
         <div className="flex flex-col items-center text-center md:flex-row gap-8">
           <motion.div
             initial={{ opacity: 0, x: 20 }}

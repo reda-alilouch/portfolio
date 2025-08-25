@@ -19,7 +19,7 @@ const ContactSection = () => {
             Contactez-moi
           </motion.h2>
           <motion.p
-            className="text-gray-600 dark:text-gray-300 mb-10"
+            className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-10"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
