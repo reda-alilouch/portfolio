@@ -1,4 +1,3 @@
-
 // projectsData.ts
 export interface Project {
   // Données de base pour les cartes
@@ -9,7 +8,7 @@ export interface Project {
   shortDescription: string; // Pour les cartes (texte court)
   images: {
     url: string; // Chemin de l'image
-    alt: string;    
+    alt: string;
   }[];
 
   technologies: string[];
@@ -59,23 +58,23 @@ export const projects: Project[] = [
       "Ce portfolio met en avant le parcours, les compétences et les projets d'une infographiste. Conçu avec Next.js et Tailwind CSS, il offre une navigation fluide, un mode clair/sombre, une section blog, une page contact avec formulaire dynamique et une optimisation SEO poussée. Chaque projet est présenté avec détails techniques, défis et résultats obtenus.",
     images: [
       {
-        url: "/photo1.jpeg",
+        url: "portfolio/photo1.jpeg",
         alt: "Portfolio Infographiste - Photo 1",
       },
       {
-        url: "/photo2.png",
+        url: "portfolio/photo2.png",
         alt: "Portfolio Infographiste - Photo 2",
       },
       {
-        url: "/photo3.png",
+        url: "portfolio/photo3.png",
         alt: "Portfolio Infographiste - Photo 3",
       },
       {
-        url: "/photo4.png",
+        url: "portfolio/photo4.png",
         alt: "Portfolio Infographiste - Photo 4",
       },
       {
-        url: "/photo5.png",
+        url: "portfolio/photo5.png",
         alt: "Portfolio Infographiste - Photo 5",
       },
     ],
@@ -129,6 +128,160 @@ export const projects: Project[] = [
       company: "Freelance",
     },
   },
+  {
+    id: 2,
+    title: "Ripple",
+    slug: "ripple",
+    category: "musique",
+    description:
+      "Ripple est une plateforme de streaming de musique qui permet aux utilisateurs de découvrir et de jouer des chansons en direct.",
+    shortDescription: "Plateforme de streaming de musique",
+    longDescription:
+      "Ripple est une plateforme de streaming de musique qui permet aux utilisateurs de découvrir et de jouer des chansons en direct.",
+    images: [
+      {
+        url: "/photo1.jpeg",
+        alt: "Ripple - Photo 1",
+      },
+      {
+        url: "/photo2.png",
+        alt: "Ripple - Photo 2",
+      },
+      {
+        url: "/photo3.png",
+        alt: "Ripple - Photo 3",
+      },
+      {
+        url: "/photo4.png",
+        alt: "Ripple - Photo 4",
+      },
+      {
+        url: "/photo5.png",
+        alt: "Ripple - Photo 5",
+      },
+    ],
+    technologies: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB",
+      "i18n",
+      "axios",
+      "spotify API",
+      "bcrypt",
+      "jsonwebtoken",
+      "next-auth",
+      "swiper",
+      "splide.js",
+    ],
+    githubUrl: "https://github.com/reda-alilouch/Ripple",
+    liveUrl: "https://ripple.vercel.app/",
+    createdAt: "2024-06-10T00:00:00Z",
+    updatedAt: "2024-07-05T00:00:00Z",
+    status: "in-progress",
+    featured: true,
+    seoTitle: "Ripple - Next.js & React",
+    seoDescription:
+      "Découvrez le Ripple, une plateforme de streaming de musique qui permet aux utilisateurs de découvrir et de jouer des chansons en direct. Créé avec Next.js, Tailwind CSS, Javascript et React. Responsive, rapide, optimisé SEO.",
+    keywords: [
+      "plateforme de streaming de musique",
+      "site personnel React",
+      "Next.js Tailwind portfolio",
+      "musique",
+      "responsive design portfolio",
+      "SEO graphiste web",
+    ],
+    challenges: [
+      "Créer une identité visuelle forte et élégante",
+      "Rendre le contenu entièrement administrable via le dashboard",
+      "Optimiser le SEO pour la recherche freelance",
+      "Assurer la compatibilité mobile et performance web",
+    ],
+    features: [
+      "Dashboard administrable",
+      "Streaming de musique",
+      "Interface utilisateur moderne",
+      "Responsive design",
+      "Optimisation SEO",
+    ],
+    metrics: {
+      performance: "100% Lighthouse Score",
+      users: "300+ utilisateurs",
+      conversion: "15% de prises de contact via le formulaire",
+    },
+  },
+  {
+    id: 3,
+    title: "Boutiqua",
+    slug: "boutiqua",
+    category: "e-commerce",
+    description:
+      "Boutiqua est une boutique en ligne spécialisée dans la vente de vêtements et d’accessoires de mode. Elle propose une sélection variée d’articles alliant style et qualité pour répondre aux besoins de ses clients.",
+    shortDescription: "Boutique en ligne de vêtements et d'accessoires",
+    longDescription:
+      "Boutiqua est une boutique en ligne spécialisée dans la vente de vêtements et d’accessoires de mode. Elle propose une sélection variée d’articles alliant style et qualité pour répondre aux besoins de ses clients.",
+    images: [
+      {
+        url: "boutiqua/photo1.jpeg",
+        alt: "boutiqua - Photo 1",
+      },
+      {
+        url: "boutiqua/photo2.png",
+        alt: "boutiqua - Photo 2",
+      },
+      {
+        url: "boutiqua/photo3.png",
+        alt: "boutiqua - Photo 3",
+      },
+      {
+        url: "boutiqua/photo4.png",
+        alt: "boutiqua - Photo 4",
+      },
+      {
+        url: "boutiqua/photo5.png",
+        alt: "boutiqua - Photo 5",
+      },
+    ],
+    technologies: [
+      "php",
+      "mysql",
+      "javascript",
+      "html",
+      "css",
+      "tailwind css",
+      "splide.js",
+    ],
+    githubUrl: "https://github.com/reda-alilouch/boutiqua",
+    liveUrl: "",
+    createdAt: "2024-06-10T00:00:00Z",
+    updatedAt: "2024-07-05T00:00:00Z",
+    status: "in-progress",
+    featured: true,
+    seoTitle: "boutiqua - php & mysql",
+    seoDescription:
+      "Découvrez le boutiqua, une boutique en ligne spécialisée dans la vente de vêtements et d’accessoires de mode. Elle propose une sélection variée d’articles alliant style et qualité pour répondre aux besoins de ses clients.",
+    keywords: [
+      "boutique en ligne",
+      "boutique en ligne de vêtements et d'accessoires",
+      "php & mysql",
+      "responsive design portfolio",
+      "SEO graphiste web",
+    ],
+    challenges: [
+      "Créer une identité visuelle forte et élégante",
+      "Rendre le contenu entièrement administrable via le dashboard",
+      "Optimiser le SEO pour la recherche freelance",
+      "Assurer la compatibilité mobile et performance web",
+    ],
+    features: [
+      "Dashboard administrable",
+      "Gestion des produits",
+      "Gestion des commandes",
+      "Gestion des utilisateurs",
+      "Gestion des catégories",
+      "Filtrage des produits",
+    ],
+  },
 ];
 
 // Fonctions utilitaires pour le SEO et les cartes
@@ -149,10 +302,10 @@ export const getProjectSEOData = (slug: string) => {
     title: project.seoTitle || `${project.title} - Portfolio Reda Alilouch`,
     description: project.seoDescription || project.description,
     keywords: project.keywords,
-    image: project.images.map(image => ({
-        url: image.url,
-        alt: image.alt,
-      })),
+    image: project.images.map((image) => ({
+      url: image.url,
+      alt: image.alt,
+    })),
     url: `https://redaalilouch.vercel.app/projects/${project.slug}`,
     createdAt: project.createdAt,
     updatedAt: project.updatedAt,
