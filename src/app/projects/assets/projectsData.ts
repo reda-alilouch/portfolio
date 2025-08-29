@@ -140,23 +140,23 @@ export const projects: Project[] = [
       "Ripple est une plateforme de streaming de musique qui permet aux utilisateurs de découvrir et de jouer des chansons en direct.",
     images: [
       {
-        url: "/photo1.jpeg",
+        url: "ripple/photo1.jpeg",
         alt: "Ripple - Photo 1",
       },
       {
-        url: "/photo2.png",
+        url: "ripple/photo2.png",
         alt: "Ripple - Photo 2",
       },
       {
-        url: "/photo3.png",
+        url: "ripple/photo3.png",
         alt: "Ripple - Photo 3",
       },
       {
-        url: "/photo4.png",
+        url: "ripple/photo4.png",
         alt: "Ripple - Photo 4",
       },
       {
-        url: "/photo5.png",
+        url: "ripple/photo5.png",
         alt: "Ripple - Photo 5",
       },
     ],
